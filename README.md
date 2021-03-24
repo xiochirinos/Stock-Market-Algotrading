@@ -1,10 +1,14 @@
 # Stock Market Algotrading
 
+***
+
 ## Authors
 
-Rene Villarreal 
-Xiomara Chirinos 
-Mariah Bastos 
+Rene Villarreal.
+Xiomara Chirinos. 
+Mariah Bastos.
+
+***
 
 ## Overview
 
@@ -23,20 +27,22 @@ The penalties for having less than 250 transactions were $100 per missed transac
 
 Two APIs were used in our codes: an API for accessing big data for all, and an API for accessing Tiingo.
 
+***
 
 ## Approach
 
-Exponential Moving Average: 
+*Exponential Moving Average:*
 The first model we used was an exponential moving average. We created two moving averages, a shorter time period (30 minutes) and a longer time period (90 minutes). Our approach using this model was simple: whenever the shorter moving average crossed the longer moving average going up, we would generate a sell signal. When the shorter moving average crossed the longer moving average going down, we would generate a buy signal. This approach is widely used in long-term trading, as it tends to show trends and when a market is bearish or bullish. In day-trading, the rules are reversed because the moving averages move very closely with the real time data. So in a long-term trading when a shorter average crosses the longer average, it tends to mean that the stock is bullish and we should buy. In day trading, it means the stock is at a higher price than when you last bought it so we would sell instead of buy. 
 
 
-Simple Moving Average: 
+*Simple Moving Average:* 
 Similar to the one above, it generates the same signals when a shorter moving average crosses the longer moving average. The main difference between these two approaches is that the simple moving averages weighs all data points the same, while an exponential moving average gives more weight to more recent data points. 
 
 
-Scalping: 
+*Scalping:* 
 This is a common approach to day-trading. The main purpose of this model is to generate small profits whenever the stock rises above the buying price. Generally, the profits are not big, but the idea is that with the sum of small profits you can eventually make enough. This model carries lower risk than the exponential moving average and the simple moving average because it is strictly based on the price of the stock at the moment, and not it's history. 
 
+***
 
 ## Instructions
 
